@@ -6,29 +6,24 @@ A partir do dataset disponível em http://insideairbnb.com/get-the-data.html, fo
 
 ## Getting started
 
-Para utilização do código, é necessário realizar o download do arquivo lib.py e listings.csv.
+Para utilização do código é necessário realizar o download do arquivo lib.py e listings.csv.
 
 
 ## Como foi a definição da sua estratégia de modelagem?
 
-A estratégia de modelagem foi baseada em algorítmos de machine learning.
+A estratégia de modelagem empregada foi a utilização de algoritmos baseados machine learning.
 
-Um aumento da capacidade computacional desde os anos 90 permitiu treinar grandes redes neurais em um período razoável de tempo.
+Um aumento da capacidade computacional desde os anos 90 permitiu treinar grandes redes neurais em um período razoável de tempo. Além disso, a alta capacidade das redes neurais de generalização (produzir saídas adequadas para entradas que não estavam presentes durante o treinamento do modelo) permite a resolução de problemas de grande escala.
 
-Além disso, a alta capacidade das redes neurais de generalização (produzir
-saídas adequadas para entradas que não estavam presentes durante o
-treinamento do modelo) premite a resolução de problemas
-de grande escala.
+As redes neurais são consideradas técnicas metaheurísticas para otimização de problemas e tem sido amplamente utilizadas na previsão de preços, em áreas de aplicação distintas.
 
 
 ## Como foi definida a função de custo utilizada?
 
 
-No treinamento desta rede neural, foi utilizado o algorítmo de backpropagation Adam.
+No treinamento desta rede neural, foi utilizado o algoritmo de backpropagation Adam.
 
-A diferença entre a saída proporcionada pela rede neural e a saída real é calculada através de uma função de custo. Esta função informa o nível de precisão da rede neural em suas previsões para uma determinada entrada. O processo de calcular essa precisão (erro) é repetido diversas vezes até que a função de custo seja minimizada, ou seja, o erro seja minimizado. 
-
-Geralmente ele é calculado através do método do gradiente descendente. O algorítmo Adam é baseado nele.
+A diferença entre a saída proporcionada pela rede neural e a saída real é calculada através de uma função de custo. Esta função informa o nível de precisão da rede neural em suas previsões para uma determinada entrada. O processo de calcular essa precisão (erro) é repetido diversas vezes até que a função de custo seja minimizada, ou seja, o erro seja minimizado. Geralmente ele é calculado através do método do gradiente descendente. O algoritmo Adam é baseado nele.
 
 O principal desafio passa a ser como localizar o mínimo global e não "ficar preso" em mínimos locais. As redes neurais são boas em evitar mínimos locais e se aproximam ao máximo da melhor solução (metaheurísticas).
 
@@ -36,22 +31,14 @@ O principal desafio passa a ser como localizar o mínimo global e não "ficar pr
 ## Qual foi o critério utilizado na seleção do modelo final?
 
 
-Os métodos empíricos e de pesquisa de grade (grid search) foram utilizados
-para obter o conjunto apropriado de hiperparâmetros neste projeto. O grid
-search é uma ferramenta que realiza uma busca exaustiva nos valores dos
-parâmetros especificados para um estimador.
+Os métodos empíricos e de pesquisa de grade (grid search) foram utilizados para obter o conjunto apropriado de hiperparâmetros neste projeto. O gridSearch é uma ferramenta que realiza uma busca exaustiva nos valores dos parâmetros especificados para um estimador.
 
-Uma prática comum adotada pelos cientistas de dados na escolha de número
-de neurônios é formar camadas ocultas com cada vez menos neurônios, em
-geral, aumentar o número de camadas é melhor do que aumentar o número de
-neurônios por camadas. A abordagem adotada foi inicializar o processo de
-treinamento com uma camada, até verificação de sobreajuste.
+Uma prática comum adotada pelos cientistas de dados na escolha de número de neurônios é formar camadas ocultas com cada vez menos neurônios, em geral, aumentar o número de camadas é melhor do que aumentar o número de neurônios por camadas. A abordagem adotada foi inicializar o processo de treinamento com uma camada, até verificação de sobreajuste.
 
 
 ## Qual foi o critério utilizado para validação do modelo?
 
 Mean Squared Error - MSE e Mean Absolute Error - MAE
-
 
 ## Por que escolheu utilizar este método?
 
@@ -71,12 +58,9 @@ Embora todos os modelos tenham sido desenvolvidos com base nos critérios do MSE
 
 Para seleção do melhor modelo, o conjunto de dados foi testado 30 vezes utilizando validação cruzada com 10 folds (método dos 30 testes). 
 
-Em cada um dos 30 testes, a semente geradora (parâmetro random state) variou de 1 a 30. Este parâmetro afeta a ordem dos índices e controla a aleatoriedade de cada
-fold.
+Em cada um dos 30 testes, a semente geradora (parâmetro random state) variou de 1 a 30. Este parâmetro afeta a ordem dos índices e controla a aleatoriedade de cada fold.
 
-Em um futuro trabalho, seria importante aprimorar o modelo, fazer novas análises no banco de dados, e comparações com outros algorítmos. 
-
-
+Em um futuro trabalho, seria importante aprimorar o modelo, fazer novas análises no banco de dados, e comparações com outros algoritmos. 
 Os testes de Friedman e Nemenyi podem ser utilizados para provar estatisticamente que um algoritmo supera o outro.
 
 
